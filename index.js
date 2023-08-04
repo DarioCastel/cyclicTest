@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
+const connectDB = require("./connectDB");
 
 const PORT = process.env.PORT | 5000;
 
+connectDB();
 app.get("/",(req,res)=>{
     res.json({message:"oli"})
 })
